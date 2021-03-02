@@ -2,6 +2,8 @@
 <html>
 	<head>
 
+
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4L8LSDZHW"></script>
 <script>
@@ -10,6 +12,17 @@
   gtag('js', new Date());
 
   gtag('config', 'G-H4L8LSDZHW');
+</script>
+
+<!-- SCRIPT CONTROL DE COOKIES -->
+<script type="text/javascript">
+function controlcookies() {
+         // si variable no existe se crea (al clicar en Aceptar)
+    localStorage.controlcookie = (localStorage.controlcookie || 0);
+
+    localStorage.controlcookie++; // incrementamos cuenta de la cookie
+    cookie1.style.display='none'; // Esconde la política de cookies
+}
 </script>
 
 		<title>DRALT  Altura y conservación</title>
@@ -23,6 +36,12 @@
 		<meta name="robots" content="index"/>
 			</head>
 	<body class="homepage is-preload">
+
+		<div class="btn-whatsapp">
+<a href="https://api.whatsapp.com/send?phone=+34 633 625 771" target="_blank">
+<img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
+</a>
+</div>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -44,6 +63,23 @@
 
 				</section>
 
+				<!--Código HTML de la política de cookies -->
+
+				<!--La URL incluida es la parte que se ha de modificar -->
+
+				<div class="cookiesms" id="cookie1">
+				Esta web utiliza cookies, puedes ver nuestra  <a href="./cookies.html">política de cookies aquí.</a>
+				Si continuas navegando estás aceptándola
+				<button onclick="controlcookies()">Aceptar</button>
+				<div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Política de cookies + </div>
+				</div>
+				<script type="text/javascript">
+				if (localStorage.controlcookie>0){
+				document.getElementById('cookie1').style.bottom = '-50px';
+				}
+				</script>
+
+				<!-- Fin del código de cookies --->
 
 			<!-- Intro -->
 				<section id="intro" class="wrapper style1">
@@ -54,6 +90,7 @@
 						<p class="style2">
 							Nos avala nuestra experiencia de más de 12 años en el sector, trabajando con los mejores equipos y materiales del mercado.</a>
 						</p>
+
 
 						<div class="container">
 							<p>Algunos de nuestros clientes:</p>
