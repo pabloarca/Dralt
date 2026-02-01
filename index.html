@@ -232,18 +232,28 @@ function controlcookies() {
 							<a  class="image featured">
 								<style>
 								.parallax {
-	  						/* The image used */
-	  					background-image: url("images/vertical.png");
+        /* La imagen usada */
+        background-image: url("images/vertical.png");
 
-	  					/* Set a specific height */
-	  						height: 500px;
+        /* Altura específica */
+        height: 500px;
 
-	  						/* Create the parallax scrolling effect */
-	  					background-attachment: fixed;
-	  				background-position: center;
-	  			background-repeat: no-repeat;
-	  		background-size: cover;
-				}
+        /* Efecto Parallax para PC */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* CORRECCIÓN PARA MÓVILES:
+       Desactiva el parallax en pantallas táctiles/pequeñas para evitar el zoom excesivo */
+    @media only screen and (max-device-width: 1366px) {
+        .parallax {
+            background-attachment: scroll;
+            background-position: center top; /* Alinea la imagen arriba para ver al operario */
+            height: 400px; /* Un poco menos de altura en móvil queda mejor */
+        }
+    }
 				</style>
 
 					<!-- Container element -->
